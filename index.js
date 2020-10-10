@@ -33,7 +33,7 @@ const dateFormat = require('dateformat');
 
 client.on("guildCreate", (guild) => {
        let channel = client.channels.get(guild.channels.filter(c => c.permissionsFor(client.user).has("SEND_MESSAGES") && c.type === "text").map(r => r.id)[0])    
-       channel.send(`**قنــاتنا علـى اليوتيوب https://www.youtube.com/channel/UCP6BTyTx2yoxcYcNpYcUZjA**`)
+       channel.send(`** حياكم افضل بوت اداري **`)
 });
 
 
@@ -63,8 +63,8 @@ client.on('message', message => {
 
 
 
-const prefix = "البرفكس هنا"
-const developers = "الايدي بتاعك هنا"
+const prefix = " $ "
+const developers = " 764157419416584193 "
 
 
 
@@ -842,7 +842,7 @@ client.on('message',async message => {
         });
       });
     } else if(!mentionn) {
-      credits[author].credits += (+daily);
+      credits[author].credits += (+راتب);
       fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
  
       message.channel.send(`**:atm: | \`${daily}\`, تم اعطائك المبلغ**`);
@@ -866,7 +866,7 @@ client.on("message", message => {
   message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
  m.send(`${argresult}\n ${m}`);
 })
- message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`); 
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : 🤠عدد الاعضاء المستلمين`); 
  message.delete(); 
 };     
 });
